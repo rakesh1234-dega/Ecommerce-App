@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global background and text color */
+html, body {
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* Font setup */
+* {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Custom fonts */
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-variable {
+  font-family: 'Roboto Flex', sans-serif;
+}
+
+/* Active link style */
+a.active hr {
+  display: block;
+}
+::-webkit-scrollbar{
+  display:none
+
+}
+
+/* Responsive nav active style */
+@media (max-width: 640px) {
+  a.active {
+    background-color: black;
+    color: white;
+  }
+}
