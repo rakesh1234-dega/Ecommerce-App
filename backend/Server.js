@@ -17,9 +17,10 @@ const port = process.env.PORT || 4000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// ✅ Serve the uploads folder statically
+// Serve the uploads folder statically
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
+// Connect to DB and Cloudinary
 connectDB();
 connectCloudinary();
 
@@ -30,14 +31,16 @@ app.use(cors());
 // Routes
 app.use('/api/user', userRouter);
 app.use('/api/product', productRouter);
-app.use('/api/cart/',cartRouter)
+app.use('/api/cart', cartRouter);
 app.use('/api/order', orderRouter);
-
-
 
 // Health check
 app.get('/', (req, res) => {
-    res.send("API Working");
+  res.send("API Working");
 });
 
-app.listen(port, () => console.log('Server started on PORT: ' + port));
+// ❌ REMOVE this (Vercel won't allow it)
+// app.listen(port, () => console.log('Server started on PORT: ' + port));
+
+// ✅ EXPORT app
+export default app;
