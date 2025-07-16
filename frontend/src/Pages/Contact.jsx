@@ -13,10 +13,11 @@ const Contact = () => {
         <img className='w-full md:max-w-[480px]' src={assets.contact_img}/>
         <div className='flex flex-col justify-center items-start gap-6'>
           <p className='font-semibold text-xl text-slate-300'>Our Store</p>
-          <p className='text-slate-300'>Lorem ipsum dolor sit<br /> amet consectetur adipisicing elit. Accusanti</p>
-          <p className='text-slate-400'> Tel : (+91) 7780470071<br/>Email:degarakesh72@gmail.com </p>
+          <p className='text-slate-200'>Discover timeless fashion, modern style, and everyday .<br /> comfort — all in one place.
+At Forever, we design clothes that feel as good as they look</p>
+          <p className='text-slate-200'> Tel : (+91) 7780470071<br/>Email:degarakesh72@gmail.com </p>
           <p className='font-semibold text-xl text-slate-100'> Careers at Forever</p>
-         <p className='text-slate-400'> Learn more about our teams and job openings.. </p>
+         <p className='text-slate-200'> Learn more about our teams and job openings.. </p>
          <button className='border border-slate-200  text-gray-100 px-8 py-4 text-sm hover:bg-gray-600 hover:text-slate-100 transition-all duration-500'>Explore Jobs</button>
         </div>
       </div>

@@ -25,21 +25,67 @@ const Navbar = () => {
           <img src={assets.logo} className='w-36 invert' alt="Logo" />
         </Link>
 
-        {/* Center Section: Desktop Menu */}
-   <ul className='hidden sm:flex gap-4 text-sm font-libertinus'>
-
-  <NavLink to='/' className='px-4 py-1 rounded-lg bg-slate-100 text-black hover:bg-gray-200 transition-all'>
-    HOME
-  </NavLink>
-  <NavLink to='/collection' className='px-4 py-1 rounded-lg bg-white text-black hover:bg-gray-200 transition-all'>
-    COLLECTION
-  </NavLink>
-  <NavLink to='/about' className='px-4 py-1 rounded-lg bg-white text-black hover:bg-gray-200 transition-all'>
-    About
-  </NavLink>
-  <NavLink to='/contact' className='px-4 py-1 rounded-lg bg-white text-black hover:bg-gray-200 transition-all'>
-    Contact
-  </NavLink>
+<ul className='hidden sm:flex items-center gap-8'>
+  <li>
+    <NavLink
+      to="/"
+      className={({ isActive }) =>
+        `relative py-2 px-1 text-white/90 hover:text-white transition-all duration-300 ${
+          isActive ? 'font-semibold text-white' : ''
+        }`
+      }
+    >
+      HOME
+      {({ isActive }) => isActive && (
+        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white animate-underline origin-left"></span>
+      )}
+    </NavLink>
+  </li>
+  <li>
+    <NavLink
+      to="/collection"
+      className={({ isActive }) =>
+        `relative py-2 px-1 text-white/90 hover:text-white transition-all duration-300 ${
+          isActive ? 'font-semibold text-white' : ''
+        }`
+      }
+    >
+      COLLECTION
+      {({ isActive }) => isActive && (
+        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white animate-underline origin-left"></span>
+      )}
+    </NavLink>
+  </li>
+  <li>
+    <NavLink
+      to="/about"
+      className={({ isActive }) =>
+        `relative py-2 px-1 text-white/90 hover:text-white transition-all duration-300 ${
+          isActive ? 'font-semibold text-white' : ''
+        }`
+      }
+    >
+      ABOUT
+      {({ isActive }) => isActive && (
+        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white animate-underline origin-left"></span>
+      )}
+    </NavLink>
+  </li>
+  <li>
+    <NavLink
+      to="/contact"
+      className={({ isActive }) =>
+        `relative py-2 px-1 text-white/90 hover:text-white transition-all duration-300 ${
+          isActive ? 'font-semibold text-white' : ''
+        }`
+      }
+    >
+      CONTACT
+      {({ isActive }) => isActive && (
+        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white animate-underline origin-left"></span>
+      )}
+    </NavLink>
+  </li>
 </ul>
 
 

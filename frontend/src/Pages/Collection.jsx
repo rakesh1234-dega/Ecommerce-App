@@ -151,7 +151,7 @@ const Collection = () => {
               <input
                 className='w-3'
                 type='checkbox'
-                value='Bottomwear'
+                value='Bottom'
                 onChange={toggleSubCategory}
               />
               Bottomwear
